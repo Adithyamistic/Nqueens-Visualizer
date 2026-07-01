@@ -43,4 +43,4 @@ Interactive web application that solves the N-Queens problem using **optimized b
 ### Clone Repository
 
 ```bash
-git clone <your-repository-url>
+git clone https://github.com/Adithyamistic/Nqueens-Visualizer
