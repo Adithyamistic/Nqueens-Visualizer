@@ -13,16 +13,6 @@ Interactive web application that solves the N-Queens problem using **optimized b
 
 ---
 
-### Solving N = 8
-
-![N=8](screenshots/n8.png)
-
----
-
-### Theory Section
-
-![Theory](screenshots/theory.png)
-
 ---
 
 ## ✨ Features
