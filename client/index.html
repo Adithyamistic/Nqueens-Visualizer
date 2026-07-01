@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>N-Queens Algorithm Visualizer</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <div class="background"></div>
+
+    <div class="container">
+
+        <!-- HEADER -->
+
+        <header>
+
+            <div>
+
+                <h1>♛ N-Queens Algorithm Visualizer</h1>
+
+                <p>
+                    Optimized Backtracking using Hashing
+                </p>
+
+            </div>
+
+        </header>
+
+        <!-- CONTROL PANEL -->
+
+        <section class="glass control-panel">
+
+            <div class="input-box">
+
+                <label>Board Size (N)</label>
+
+                <input
+                    type="number"
+                    id="nValue"
+                    value="4"
+                    min="1"
+                    max="12">
+
+            </div>
+
+            <button id="solveBtn">
+
+                <i class="fa-solid fa-play"></i>
+
+                Solve
+
+            </button>
+
+        </section>
+
+        <!-- STATS -->
+
+        <section class="stats">
+
+            <div class="glass stat-card">
+
+                <h2 id="count">0</h2>
+
+                <p>Total Solutions</p>
+
+            </div>
+
+            <div class="glass stat-card">
+
+                <h2 id="time">0 ms</h2>
+
+                <p>Execution Time</p>
+
+            </div>
+
+            <div class="glass stat-card">
+
+                <h2 id="current">0 / 0</h2>
+
+                <p>Current Solution</p>
+
+            </div>
+
+        </section>
+
+        <!-- MAIN CONTENT -->
+
+        <section class="main-content">
+
+            <!-- BOARD -->
+
+            <div class="glass board-card">
+
+                <div class="board-header">
+
+                    <h2>
+
+                        <i class="fa-solid fa-chess-board"></i>
+
+                        Chessboard
+
+                    </h2>
+
+                </div>
+
+                <div id="board"></div>
+
+                <div class="navigation">
+
+                    <button id="prevBtn">
+
+                        <i class="fa-solid fa-arrow-left"></i>
+
+                        Previous
+
+                    </button>
+
+                    <button id="nextBtn">
+
+                        Next
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+            <!-- THEORY -->
+
+            <div class="glass theory-card">
+
+                <h2>
+
+                    <i class="fa-solid fa-book-open"></i>
+
+                    Learn Backtracking
+
+                </h2>
+
+                <!-- Accordion -->
+
+                <details open>
+
+                    <summary>
+
+                        What is N-Queens?
+
+                    </summary>
+
+                    <p>
+
+                        The N-Queens problem asks us to place N queens on an N × N chessboard such that no two queens attack each other.
+
+                    </p>
+
+                </details>
+
+                <details>
+
+                    <summary>
+
+                        Why Backtracking?
+
+                    </summary>
+
+                    <p>
+
+                        Instead of checking every possible arrangement, backtracking places queens row by row.
+                        Whenever a dead end is reached, it removes the last queen and explores another path.
+
+                    </p>
+
+                </details>
+
+                <details>
+
+                    <summary>
+
+                        Hashing Optimization
+
+                    </summary>
+
+                    <ul>
+
+                        <li><b>columns[]</b> → occupied columns</li>
+
+                        <li><b>diag1[]</b> → row + column</li>
+
+                        <li><b>diag2[]</b> → row − column + N − 1</li>
+
+                    </ul>
+
+                    <p>
+
+                        Safety checking becomes O(1).
+
+                    </p>
+
+                </details>
+
+                <details>
+
+                    <summary>
+
+                        Dry Run (N = 4)
+
+                    </summary>
+
+<pre>
+
+Step 1
+
+Q . . .
+. . . .
+. . . .
+. . . .
+
+↓
+
+Place Queen at (0,0)
+
+↓
+
+Try Row 1
+
+↓
+
+Conflict
+
+↓
+
+Backtrack
+
+↓
+
+Try another column
+
+↓
+
+Eventually two valid
+solutions are found.
+
+</pre>
+
+                </details>
+
+                <details>
+
+                    <summary>
+
+                        Time Complexity
+
+                    </summary>
+
+                    <ul>
+
+                        <li>Safety Check : O(1)</li>
+
+                        <li>Overall Search : O(N!)</li>
+
+                        <li>Extra Space : O(N)</li>
+
+                    </ul>
+
+                </details>
+
+            </div>
+
+        </section>
+
+        <!-- FOOTER -->
+
+        <footer>
+
+            <p>
+
+                Built using HTML • CSS • JavaScript • Node.js • Express.js
+
+            </p>
+
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
