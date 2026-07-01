@@ -8,7 +8,8 @@ Interactive web application that solves the N-Queens problem using **optimized b
 
 ### Home Page
 
-![Home](screenshots/home.png)
+<img width="1538" height="850" alt="image" src="https://github.com/user-attachments/assets/81d9e619-bcca-4379-a13b-de66e32c0d3c" />
+
 
 ---
 
