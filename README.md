@@ -1,6 +1,6 @@
 # ♛ N-Queens Algorithm Visualizer
 
-Interactive web application that solves the N-Queens problem using **optimized backtracking with hashing**. Users can enter any board size (1–12), generate all valid solutions, and navigate between them.
+Interactive web application that solves the N-Queens problem using **optimized backtracking with hashing**. Users can enter any board size (1–9), generate all valid solutions, and navigate between them.
 
 ---
 

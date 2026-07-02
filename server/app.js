@@ -17,9 +17,9 @@ app.post("/solve", (req, res) => {
             error: "Please enter a valid integer."
         });
     }
-    if (n < 1 || n > 12) {
+    if (n < 1 || n >9) {
     return res.status(400).json({
-        error: "Please enter N between 1 and 12."
+        error: "Please enter N between 1 and 9."
     });
 }
 
